@@ -13,8 +13,14 @@ app.use(express.json());
 
 app.use('/api/startups', startupRoutes);
 
+const startups = [
+  { id: 1, name: 'Startup A', description: 'Innovative tech solutions' },
+  { id: 2, name: 'Startup B', description: 'Sustainable energy products' },
+  { id: 3, name: 'Startup C', description: 'AI-driven healthcare' }
+];
+
 app.get('/', (req, res) => {
-  res.send('Welcome to the Startup Platform API');
+  res.json(startups);
 });
 
 export default app;
