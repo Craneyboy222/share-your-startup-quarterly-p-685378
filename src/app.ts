@@ -13,4 +13,8 @@ app.use(express.json());
 
 app.use('/api/startups', startupRoutes);
 
+app.get('/', (req, res) => {
+  res.send('Welcome to the Startup Platform API');
+});
+
 export default app;
