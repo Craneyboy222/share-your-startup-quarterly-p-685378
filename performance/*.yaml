@@ -1,0 +1,54 @@
+/* Performance configuration */
+version: '3.8'
+services:
+  web:
+    image: 'node:14'
+    deploy:
+      replicas: 3
+      resources:
+        limits:
+          cpus: '0.50'
+          memory: 512M
+      restart_policy:
+        condition: on-failure
+    ports:
+      - '80:80'
+    networks:
+      - webnet
+  redis:
+    image: 'redis:alpine'
+    ports:
+      - '6379:6379'
+    networks:
+      - webnet
+
+networks:
+  webnet:
+    driver: bridge
+
+# Load Balancer Configuration
+load_balancer:
+  enable: true
+  strategy: round-robin
+  targets:
+    - service: web
+
+# CDN Configuration
+cdn:
+  provider: cloudfront
+  settings:
+    - caching_behavior: all
+
+# Performance Monitoring
+performance_monitoring:
+  tools:
+    - name: NewRelic
+    - name: Datadog
+  metrics:
+    - api_latency
+    - database_query_time
+    - cache_hits
+    - response_time
+  logging:
+    level: error
+    output: 'logs/performance.log'

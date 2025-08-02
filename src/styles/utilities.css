@@ -1,0 +1,37 @@
+/* Utility styles */
+
+.hidden {
+  @apply hidden;
+}
+
+.flex-center {
+  @apply flex items-center justify-center;
+}
+
+.flex-between {
+  @apply flex items-center justify-between;
+}
+
+.text-truncate {
+  @apply overflow-hidden overflow-ellipsis whitespace-nowrap;
+}
+
+.border-rounded {
+  @apply border rounded-md;
+}
+
+.bg-primary {
+  @apply bg-blue-600;
+}
+
+.bg-secondary {
+  @apply bg-gray-200;
+}
+
+.text-primary {
+  @apply text-blue-600;
+}
+
+.text-secondary {
+  @apply text-gray-600;
+}

@@ -1,0 +1,60 @@
+openapi: 3.0.0
+info:
+  title: Enterprise Application API
+  description: API for managing startups, users, and interactions.
+  version: 1.0.0
+  contact:
+    name: API Support
+    email: support@example.com
+servers:
+  - url: http://localhost:5000
+    description: Development server
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+security:
+  - bearerAuth: []
+paths:
+  /api/startups:
+    get:
+      summary: List all startups
+      responses:
+        '200':
+          description: A list of startups.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Startup'
+    post:
+      summary: Submit a new startup
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/NewStartup'
+      responses:
+        '201':
+          description: Startup created.
+  /api/startups/{id}:
+    get:
+      summary: Get startup details
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: A startup object
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Startup'
+... (additional paths and schemas)

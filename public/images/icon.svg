@@ -1,0 +1,5 @@
+/* Icon file: This SVG file should represent the application's iconography, designed to be scalable without loss of quality. Ensure the SVG code is clean and optimized. */
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <circle cx="32" cy="32" r="30" fill="#4A90E2" />
+  <text x="32" y="37" font-family="Arial, sans-serif" font-size="24" fill="white" text-anchor="middle">S</text>
+</svg>

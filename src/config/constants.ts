@@ -1,0 +1,9 @@
+export const APP_NAME = 'StartupPlatform';
+export const API_VERSION = 'v1';
+export const SUPPORTED_LANGUAGES = ['en', 'es', 'fr'];
+export const DEFAULT_LANGUAGE = 'en';
+export const ITEMS_PER_PAGE = 20;
+export const JWT_EXPIRY = '1h';
+export const MAX_COMMENT_LENGTH = 500;
+export const MAX_STARTUP_NAME_LENGTH = 100;
+export const MAX_DISCOUNT_DESCRIPTION_LENGTH = 255;

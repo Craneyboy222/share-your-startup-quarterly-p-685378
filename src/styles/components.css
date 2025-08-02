@@ -1,0 +1,41 @@
+/* Component styles */
+
+.header {
+  @apply flex items-center justify-between px-4 py-3 bg-white shadow-md;
+}
+
+.footer {
+  @apply py-4 bg-gray-100 text-center;
+}
+
+.card {
+  @apply bg-white shadow-md rounded-lg p-6 mb-4;
+}
+
+.modal {
+  @apply fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center;
+}
+
+.modal-content {
+  @apply bg-white rounded-lg p-8 shadow-lg;
+}
+
+.notification {
+  @apply p-4 mb-4 border-l-4;
+}
+
+.notification-info {
+  @apply border-blue-500 bg-blue-50 text-blue-700;
+}
+
+.notification-success {
+  @apply border-green-500 bg-green-50 text-green-700;
+}
+
+.notification-warning {
+  @apply border-yellow-500 bg-yellow-50 text-yellow-700;
+}
+
+.notification-error {
+  @apply border-red-500 bg-red-50 text-red-700;
+}

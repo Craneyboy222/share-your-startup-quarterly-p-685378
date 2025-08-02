@@ -1,0 +1,22 @@
+/* Stylesheet: This file contains global styling rules for the application using Tailwind CSS. Ensure to include responsive design principles and accessibility considerations. */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f9fafb;
+  color: #1a202c;
+}
+
+.header {
+  @apply flex justify-between items-center p-4 bg-white shadow;
+}
+
+.button-primary {
+  @apply bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-600;
+}
+
+/* Additional component styles can follow */
